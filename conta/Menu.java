@@ -2,19 +2,27 @@ package conta;
 
 import java.util.Scanner;
 import conta.util.Cores;
+import conta.model.Conta;
 
 public class Menu {
 
 	public static void main(String[] args) {
+
+		Conta c1 = new Conta(1, 123, 1, "Adriana", 10000.0f);
+		c1.Visualizar();
+		c1.Sacar(12000.0f);
+		c1.Visualizar();
+		c1.Depositar(5000.0f);
+		c1.Visualizar();
 
 		Scanner scanner = new Scanner(System.in);
 
 		int opcao;
 
 		while (true) {
-			
-			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND 
-							 + "**************************************************************");
+
+			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND
+					+ "**************************************************************");
 			System.out.println("                                                              ");
 			System.out.println("                      BANCO DO BRAZIL COM Z                   ");
 			System.out.println("                                                              ");
@@ -39,7 +47,8 @@ public class Menu {
 			opcao = scanner.nextInt();
 
 			if (opcao == 9) {
-				System.out.println(Cores.TEXT_WHITE_BOLD + "Banco do Brazil com Z - Simples, rápido e inovador só que com Z ");
+				System.out.println(
+						Cores.TEXT_WHITE_BOLD + "Banco do Brazil com Z - Simples, rápido e inovador só que com Z ");
 				sobre();
 				scanner.close();
 				System.exit(0);
@@ -47,35 +56,35 @@ public class Menu {
 			}
 			switch (opcao) {
 			case 1:
-				System.out.println(Cores.TEXT_WHITE_BOLD +"Criar conta\n\n");
+				System.out.println(Cores.ANSI_BLACK_BACKGROUND + "Criar conta\n\n");
 
 				break;
 			case 2:
-				System.out.println(Cores.TEXT_WHITE_BOLD +"Listar todos as contas\n\n");
+				System.out.println(Cores.ANSI_BLACK_BACKGROUND + "Listar todos as contas\n\n");
 
 				break;
 			case 3:
-				System.out.println(Cores.TEXT_WHITE_BOLD +"Consultar dados da conta\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Consultar dados da conta\n\n");
 
 				break;
 			case 4:
-				System.out.println(Cores.TEXT_WHITE_BOLD +"Atualizar dados da conta \n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Atualizar dados da conta \n\n");
 
 				break;
 			case 5:
-				System.out.println(Cores.TEXT_WHITE_BOLD +"Apagar a conta\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Apagar a conta\n\n");
 
 				break;
 			case 6:
-				System.out.println(Cores.TEXT_WHITE_BOLD +"Saque\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Saque\n\n");
 
 				break;
 			case 7:
-				System.out.println(Cores.TEXT_WHITE_BOLD +"Depósito\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Depósito\n\n");
 
 				break;
 			case 8:
-				System.out.println(Cores.TEXT_WHITE_BOLD +"Transferência entre contas\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Transferência entre contas\n\n");
 
 				break;
 			default:
@@ -89,11 +98,11 @@ public class Menu {
 	public static void sobre() {
 		System.out.println("\n**************************************************************");
 		System.out.println("*                                                            *");
-		System.out.println("*                Projeto Desenvolvido por:                   *");
+		System.out.println("*                  Projeto Desenvolvido por:                 *");
 		System.out.println("*         Aline Ferreira - alineferreirasnsd@gmail.com       *");
 		System.out.println("*        https://github.com/4lineferreira/contabancaria      *");
 		System.out.println("*                                                            *");
 		System.out.println("**************************************************************");
 	}
-
+		
 }
