@@ -2,7 +2,7 @@ package conta.model;
 
 import conta.util.Cores;
 
-public class Conta {
+public abstract class Conta {
 
 	private int numero;
 	private int agencia;
@@ -17,6 +17,7 @@ public class Conta {
 		this.tipo = tipo;
 		this.titular = titular;
 		this.saldo = saldo;
+
 	}
 
 	public int getNumero() {
@@ -95,4 +96,5 @@ public class Conta {
 		System.out.println(Cores.TEXT_WHITE_BOLD + "Saldo: " + this.saldo);
 
 	}
+
 }

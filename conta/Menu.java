@@ -3,17 +3,31 @@ package conta;
 import java.util.Scanner;
 import conta.util.Cores;
 import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
+
 
 public class Menu {
 
 	public static void main(String[] args) {
 
-		Conta c1 = new Conta(1, 123, 1, "Adriana", 10000.0f);
-		c1.Visualizar();
-		c1.Sacar(12000.0f);
-		c1.Visualizar();
-		c1.Depositar(5000.0f);
-		c1.Visualizar();
+		
+		
+		//teste da classe conta corrente
+		ContaCorrente cc1 = new ContaCorrente(2, 123, 1, "Mariana", 15000.0f, 1000.0f);
+		cc1.Visualizar();
+		cc1.Sacar(12000.0f);
+		cc1.Visualizar();
+		cc1.Depositar(5000.0f);
+		cc1.Visualizar();
+		
+		//teste conta poupança
+		ContaPoupanca cp1 = new ContaPoupanca(3, 122, 2, "Vitor", 100000.0f, 15);
+		cp1.Visualizar();
+		cp1.Sacar(1000.0f);
+		cp1.Visualizar();
+		cp1.Depositar(5000.0f);
+		cp1.Visualizar();
 
 		Scanner scanner = new Scanner(System.in);
 
@@ -56,11 +70,11 @@ public class Menu {
 			}
 			switch (opcao) {
 			case 1:
-				System.out.println(Cores.ANSI_BLACK_BACKGROUND + "Criar conta\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Criar conta\n\n");
 
 				break;
 			case 2:
-				System.out.println(Cores.ANSI_BLACK_BACKGROUND + "Listar todos as contas\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Listar todos as contas\n\n");
 
 				break;
 			case 3:
